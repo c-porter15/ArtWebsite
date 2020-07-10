@@ -9,7 +9,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+        <script src="GalleryResponse.js"></script>
     </head>
     
     <body>
@@ -47,24 +47,24 @@
           <!-- Gallery -->
 
         <div class="container-params">
-          <div class="container">
+          <div class="container-fluid">
               <div class="row no-gutters" style="border-style:solid;">
 
                 <div class="col" style="border-style:solid;">
                   <div class="square ">
-                      <img src="./images/hooman.png" class="img-params img-overlay" alt="">
+                      <img src="./images/mutagen vis.png" class="img-params img-overlay" alt="">
                   </div>
                 </div>
 
                 <div class="col" style="border-style:solid;">
                   <div class="square ">
-                      <img src="./images/raids setup.PNG" class="img-params img-overlay" alt="">
+                      <img src="./images/first b ring.png" class="img-params img-overlay" alt="">
                   </div>
                 </div>
 
                 <div class="col" style="border-style:solid;">
-                  <div class="square ">
-                      <img src="./images/hooman.png" class="img-params img-overlay" alt="">
+                  <div class="square">
+                      <img src="./images/mud battlestaff.png" class="img-params img-overlay" alt="">
                   </div>
                 </div>
                   
@@ -72,6 +72,17 @@
               </div>
           </div>
         </div>
-        
+
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">              
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <img src="" class="image-preview" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+        </div>
+
     </body>
 </html>

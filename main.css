@@ -5,24 +5,25 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-    color: grey;
   }
 
 .col:hover .img-overlay {
-opacity: 0.27;
+opacity: 0.6;
 }
 
 
 .container-params{
-    min-width: 300px;
+    max-width: 90vw;
+    margin: auto;
 }
 
 .square{
     width: 100%;
-    background-color:dimgray;
+    background-color:white;
     padding-top: 100%; /* 1:1 Aspect Ratio */
     position: relative; /* If you want text inside of it */
-  }
+    padding-right: 5px;
+}
 
 .img-params{
     position: absolute;
@@ -34,4 +35,14 @@ opacity: 0.27;
     left: 0;
     bottom: 0;
     right: 0;
+    padding-right: 10px; /*when viewpoort gets to smaller size remove this param*/
+    padding-left: 10px;
 }
+
+/* .image-preview{
+    width: 80vw;
+}
+
+.modal{
+    object-fit: contain;
+} */
