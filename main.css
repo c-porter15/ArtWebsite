@@ -7,16 +7,24 @@
     backface-visibility: hidden;
   }
 
-.col:hover .img-overlay {
+.col-md-4:hover .img-overlay {
 opacity: 0.6;
 }
 
+.col-sm-6:hover .img-overlay {
+  opacity: 0.6;
+}
 
+.col-6:hover .img-overlay {
+opacity: 0.6;
+}
+.container-fluid{
+  justify-content: center;
+}
 
 .container-params{
     max-width: 1500px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto;
     padding: 20px;
     background-color: thistle;
 }
@@ -74,12 +82,7 @@ opacity: 0.6;
   } */
 
   .img-params {
-    padding-left:0;
+    padding-left: 0;
     padding-right: 0;
  }
- 
- .row{
-
- }
-
 }
