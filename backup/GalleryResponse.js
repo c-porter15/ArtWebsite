@@ -1,7 +1,8 @@
 var imgs = [
-	["./images/vert.png","./images/wide.png"],
+	["./images/wide.png","./images/wide.png"],
 	["./images/hooman.png","./images/wide.png"],
-	["./images/wide.png","./images/wide.png","./images/hooman.png","./images/raids setup.png"]
+	["./images/vert.png","./images/wide.png","./images/hooman.png","./images/raids setup.png"],
+	["./images/vert.png"]
 	//[thumbnail, series1, series2]	
 ]
 // function populateCarousel() {
@@ -41,13 +42,12 @@ $(function() {
 	$('.square').on('click', function() {
 		$('.image-preview').attr('src', $(this).find('img').attr('src'));
 		var series = $(this).find('img').attr('class');
-		var src = $(this).find('img').attr('src');
 		
 		document.getElementById('prev').style.display = 'none';
 		document.getElementById('next').style.display = 'none';
 
 		if(series.includes("series")){
-			addElement(src);
+			//addElement();
 			document.getElementById('prev').style = '';
 			document.getElementById('next').style = '';
 		}
@@ -72,26 +72,19 @@ $(function() {
 	});		
 });
 
-function addElement (src) {
-	alert(src);
-	newImage = new Image();
+function addElement () {
 
 	var i;
 	for(i=0; i<imgs.length; i++){
-		if(imgs[i][0] == src)
-			break;
-	}
-
-	for(i; i<imgs[i].length; i++){
 		
 	}
-	// counter = 1;
-	// newImage = new Image();
-	// newImage.src = './images/wide' + counter + '.png';
-	// var newDiv = document.createElement("div");
-	// newDiv.setAttribute('class', 'carousel-item');
-	// newImage.classList.add('modal-img');
-	// document.getElementById("fuck").appendChild(newDiv).appendChild(newImage);
+	counter = 1;
+	newImage = new Image();
+	newImage.src = './images/wide' + counter + '.png';
+	var newDiv = document.createElement("div");
+	newDiv.setAttribute('class', 'carousel-item');
+	newImage.classList.add('modal-img');
+	document.getElementById("fuck").appendChild(newDiv).appendChild(newImage);
 	
 	
 	// counter = 1;
