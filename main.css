@@ -16,8 +16,10 @@ opacity: 0.6;
 }
 
 
+
 .container-params{
     max-width: 1500px;
+<<<<<<< HEAD
     margin: auto;
     padding: 20px;
     background-color: thistle;
@@ -25,6 +27,12 @@ opacity: 0.6;
 
 .container-fluid{
   justify-content: center;
+=======
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: thistle;
+>>>>>>> fccaddef815219b2d4db66faffcf0be7931f0fdb
 }
 
 .square{
@@ -51,6 +59,7 @@ opacity: 0.6;
 
 .modal-img{
   max-width: 90vw;
+<<<<<<< HEAD
 }
 
 .modal-dialog {
@@ -62,6 +71,19 @@ opacity: 0.6;
   max-width: 100vw !important;
 }
 
+=======
+}
+
+.modal-dialog {
+  display: table;
+}
+
+.modal-body {
+  padding: 0px !important;
+  max-width: 100vw !important;
+}
+
+>>>>>>> fccaddef815219b2d4db66faffcf0be7931f0fdb
 @media (max-width: 978px)
 {
   /* .modal-img{
@@ -83,4 +105,12 @@ opacity: 0.6;
     padding-left:0;
     padding-right: 0;
  }
+<<<<<<< HEAD
+=======
+ 
+ .row{
+
+ }
+
+>>>>>>> fccaddef815219b2d4db66faffcf0be7931f0fdb
 }
