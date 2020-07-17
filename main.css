@@ -11,14 +11,20 @@
 opacity: 0.6;
 }
 
+.col{
+  border-style: solid;
+}
 
 
 .container-params{
     max-width: 1500px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto;
     padding: 20px;
     background-color: thistle;
+}
+
+.container-fluid{
+  justify-content: center;
 }
 
 .square{
@@ -77,9 +83,4 @@ opacity: 0.6;
     padding-left:0;
     padding-right: 0;
  }
- 
- .row{
-
- }
-
 }
