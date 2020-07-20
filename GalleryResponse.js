@@ -1,35 +1,17 @@
 var imgs = [
 	["./images/vert.png","./images/wide.png"],
-	["./images/hooman.png","./images/wide.png"],
-	["./images/wide.png","./images/wide.png","./images/hooman.png","./images/raids setup.png"]
-	//[thumbnail, series1, series2]	
-]
-// function populateCarousel() {
-
-// 		
-// 	];//load all images into carousel on page load
-	
-// 	var i, j, counter;
-// 	for(i = 0; i < imgs.length; i++){
-// 		for(j = 1; j < imgs[i].length; i++){
-// 			newImage = new Image();
-// 			newImage.src = imgs[i][j];
-// 			var newDiv = document.createElement("div");
-// 			newDiv.setAttribute('class', 'carousel-item');
-// 			newImage.classList.add('modal-img');
-// 			document.getElementById("car-inner").appendChild(newDiv).appendChild(newImage);
-// 		}
-// 	}
-// }
-
-
+	["./images/hooman.PNG","./images/wide.png"],
+	["./images/wide.png","./images/wide.png","./images/hooman.PNG"]
+];
+//[thumbnail, series1, series2]	
 
 $(function() {
 $('#imagemodal').on('hidden.bs.modal', function () {
 	var element = document.getElementsByClassName('carousel-item');
 
 	var i;
-	for (i = 1; i < element.length; i++) {
+	
+	for (i = element.length -1; i >= 1; i--) {
 		element[i].remove();
 	}
 
@@ -73,72 +55,31 @@ $(function() {
 });
 
 function addElement (src) {
-	alert(src);
-	newImage = new Image();
 
-	var i;
+	var i, j;
 	for(i=0; i<imgs.length; i++){
-		if(imgs[i][0] == src)
+		if(imgs[i][0] == src){
+			for(j=0; j<imgs[i].length - 1; j++){
+				newImage = new Image();
+				newImage.src = imgs[i][j+1];
+
+				if($(window).height() / $(window).width() >= (newImage.naturalHeight / newImage.naturalWidth)){
+					newImage.setAttribute('style' , 'img-fluid');
+				} else{
+					newImage.style.height = '80vh';
+					newImage.style.width = 'auto';
+					newImage.style.maxHeight = '80vh';
+					newImage.style.maxWidth = '80vw';
+				}
+
+				var newDiv = document.createElement("div");
+				newDiv.setAttribute('class', 'carousel-item');
+				newImage.classList.add('modal-img');
+				document.getElementById("car-inner").appendChild(newDiv).appendChild(newImage);
+			}	
 			break;
+		}
 	}
-
-	for(i; i<imgs[i].length; i++){
-		
-	}
-	// counter = 1;
-	// newImage = new Image();
-	// newImage.src = './images/wide' + counter + '.png';
-	// var newDiv = document.createElement("div");
-	// newDiv.setAttribute('class', 'carousel-item');
-	// newImage.classList.add('modal-img');
-	// document.getElementById("fuck").appendChild(newDiv).appendChild(newImage);
-	
-	
-	// counter = 1;
-	// while(true){
-		
-	// 	try {
-	// 		newImage = new Image();
-	// 		newImage.src = './images/wide' + counter + '.png';
-	// 		if(newImage.width == 0) throw "blah";
-	// 		var newDiv = document.createElement("div");
-	// 		newDiv.setAttribute('class', 'carousel-item');
-	// 		newImage.classList.add('modal-img');
-	// 		document.getElementById("fuck").appendChild(newDiv).appendChild(newImage);
-	// 	}
-	// 	catch(err) {
-	// 		alert('go fuck urself' + err)
-	// 		break;
-	// 	}
-	// 	counter++;
-	// }
-	// alert('made it');
-
-
-	// while(newImage.onload == 1){
-	// 	alert('here');
-	// 	alert('hereee');
-	// 	newImage = new Image();
-	// 	var newDiv = document.createElement("div");
-	// 	newDiv.setAttribute('class', 'carousel-item');
-	// 	newImage.classList.add('modal-img');
-	// 	document.getElementById("fuck").appendChild(newDiv).appendChild(newImage);
-
-	// 	counter = counter + 1;
-
-		
-	// }
-
-	// if($(window).height() / $(window).width() >= (newImage.naturalHeight / newImage.naturalWidth)){
-	// 	newImage.setAttribute('style' , 'img-fluid');
-	// } else{
-	// 	newImage.style.height = '80vh';
-	// 	newImage.style.width = 'auto';
-	// 	newImage.style.maxHeight = '80vh';
-	// 	newImage.style.maxWidth = '80vw';
-	// }
-	
-	
 };
 
 
